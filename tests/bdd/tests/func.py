@@ -33,3 +33,12 @@ class Unique(object):
     def __iter__(self):
         return self
 
+
+
+def sort_1(data):
+    result = sorted(data, reverse = True, key = abs)
+    return result
+
+def sort_2(data):
+    result_with_lambda = sorted(data, key = lambda x: -abs(x))
+    return result_with_lambda
